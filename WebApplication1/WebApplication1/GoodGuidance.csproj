@@ -67,9 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Beskedside.aspx" />
+    <Content Include="Hovedside.aspx" />
+    <Content Include="Loginside.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beskedside.aspx.cs">
+      <DependentUpon>Beskedside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Beskedside.aspx.designer.cs">
+      <DependentUpon>Beskedside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hovedside.aspx.cs">
+      <DependentUpon>Hovedside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hovedside.aspx.designer.cs">
+      <DependentUpon>Hovedside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loginside.aspx.cs">
+      <DependentUpon>Loginside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loginside.aspx.designer.cs">
+      <DependentUpon>Loginside.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
