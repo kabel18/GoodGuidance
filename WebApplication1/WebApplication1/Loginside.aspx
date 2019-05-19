@@ -20,10 +20,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <p class="auto-style2"> <strong style="text-align: center">Fælles Forum </strong> </p>
+        <p class="auto-style2"> <strong style="text-align: center">Good Guidance</strong></p>
         <div style="height: 345px; font-weight: 700;">
-            <span class="auto-style1"><strong><span class="auto-style3">Velkommen.<br />
-            </span><br />
+            <span class="auto-style1"><strong><span class="auto-style3">Velkommen.</span><br />
             Login herunder</strong></span><br />
             <br />
             <asp:Label ID="LabelBrugernavn" runat="server" Text="Brugernavn:"></asp:Label>
@@ -36,7 +35,7 @@
             <br />
             <asp:Label ID="LabelPassword" runat="server" Text="Password:"></asp:Label>
             <br />
-            <asp:TextBox ID="TextBoxPassword" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="ButtonLogin" runat="server" Text="Login" OnClick="ButtonLogin_Click" />

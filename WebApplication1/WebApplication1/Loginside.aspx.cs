@@ -13,7 +13,7 @@ namespace GoodGuidance
     {
         int sessionCount = 0;
         string sessionBrugernavn = null;
-        string sessionPassword = null;
+        //string sessionPassword = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,8 +42,8 @@ namespace GoodGuidance
                 sessionBrugernavn = TextBoxBrugernavn.Text;
                 Session["Brugernavn"] = sessionBrugernavn;
 
-                sessionPassword = TextBoxPassword.Text;
-                Session["Password"] = sessionPassword;
+                //sessionPassword = TextBoxPassword.Text;
+                //Session["Password"] = sessionPassword;
             }
 
             Session["CountCounter"] = sessionCount;
@@ -57,16 +57,11 @@ namespace GoodGuidance
             Session[""] = sessionBrugernavn;
         }
 
-
-
         //string[,] brugere = new string[,]
         //{
         //    {"helegris22", "jeppeko23", "kamilnin21"},    //Array 0
         //    {"hele", "jepp", "kami"}, //Array 1
-
         //};
-
-
 
         protected void ButtonLogin_Click(object sender, EventArgs e)
         {
@@ -103,13 +98,12 @@ namespace GoodGuidance
 
             if (sessionCount == 3)
             {
-                Response.Redirect("http://www.google.dk");
+                Response.Redirect("Fejlloginside.aspx");
             }
 
             //Udskriv antal forsøg brugt
             Label5.Text = sessionCount.ToString();
             */
-
 
             //Her laves en SQL Connection objekt ud fra funktioner i System.Data.SqlClient
             SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Connection"].ConnectionString);
@@ -142,13 +136,16 @@ namespace GoodGuidance
                 connection.Open();
 
                 //en int instatieres og får værdien af den første linje fra 'cmd', som parses til int
-                int count = (int)cmd.ExecuteScalar();
+                int fundetID = (int)cmd.ExecuteScalar();
 
-                if (count > 0)
+                if (fundetID > 0)
                 {
                     Response.Redirect("Hovedside.aspx"); //Login redirect
                 }
-
+                else
+                {
+                    LabelFejl.Text = "Brugernavn og password stemmer ikke overens.";
+                }
             }
             catch (Exception)
             {
@@ -156,7 +153,6 @@ namespace GoodGuidance
             }
             finally
             {
-
                 if (connection != null) connection.Close();
             }
 
@@ -165,8 +161,7 @@ namespace GoodGuidance
 
             if (sessionCount == 3)
             {
-                Response.Redirect("http://www.google.dk");
-
+                Response.Redirect("Fejlloginside.aspx");
             }
         }
 

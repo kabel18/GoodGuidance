@@ -20,7 +20,7 @@
             <br />
             <asp:Label ID="Label3" runat="server" Text="Besked: "></asp:Label>
             <br />
-            <asp:TextBox ID="TextBoxBesked" runat="server" Height="160px" Rows="20" Width="474px" Wrap="False" TextMode="MultiLine"></asp:TextBox>
+            <asp:TextBox ID="TextBoxBesked" runat="server" Height="289px" Rows="20" Width="596px" Wrap="False" TextMode="MultiLine"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="LabelAdresse" runat="server" Text="Adresse: "></asp:Label>

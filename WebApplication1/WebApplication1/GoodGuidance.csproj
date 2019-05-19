@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Beskedside.aspx" />
+    <Content Include="Fejlloginside.aspx" />
     <Content Include="Hovedside.aspx" />
     <Content Include="Loginside.aspx" />
     <Content Include="Web.config" />
@@ -79,6 +80,13 @@
     </Compile>
     <Compile Include="Beskedside.aspx.designer.cs">
       <DependentUpon>Beskedside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fejlloginside.aspx.cs">
+      <DependentUpon>Fejlloginside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fejlloginside.aspx.designer.cs">
+      <DependentUpon>Fejlloginside.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hovedside.aspx.cs">
       <DependentUpon>Hovedside.aspx</DependentUpon>

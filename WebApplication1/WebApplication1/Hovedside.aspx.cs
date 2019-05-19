@@ -115,7 +115,6 @@ namespace GoodGuidance
             StreamWriter sw = new StreamWriter("C:\\Users\\Birkebæk\\Desktop\\Besked.txt", false);
 
             sw.WriteLine("");
-
             sw.Close();
 
             LabelConfirmed2.Text = "Alle beskeder er slettet.";
@@ -129,9 +128,7 @@ namespace GoodGuidance
 
         protected void ButtonLogout_Click(object sender, EventArgs e)
         {
-
             Response.Redirect("Loginside.aspx");
-
         }
 
         protected void ButtonReset_Click(object sender, EventArgs e)
